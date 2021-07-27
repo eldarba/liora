@@ -39,6 +39,11 @@ public class StudentRestController {
 		return null;
 	}
 
+	@GetMapping("/get-all")
+	public List<Student> getAll() {
+		return this.students;
+	}
+
 	@PutMapping("/update")
 	public boolean update(@RequestBody Student student) {
 		for (Student curr : students) {
